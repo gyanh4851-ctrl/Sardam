@@ -1,0 +1,1529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<title>Safeen PharmaCore</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght=300;400;500;600;700;800;900&display=swap"
+rel="stylesheet"/>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+font-family:'Plus Jakarta Sans',sans-serif;
+background:#020617;
+color:white;
+overflow-x:hidden;
+}
+
+/* SCROLLBAR */
+
+::-webkit-scrollbar{
+width:10px;
+}
+
+::-webkit-scrollbar-track{
+background:#020617;
+}
+
+::-webkit-scrollbar-thumb{
+background:#06b6d4;
+border-radius:20px;
+}
+
+/* NAVBAR */
+
+.navbar{
+background:rgba(2,6,23,.9);
+backdrop-filter:blur(15px);
+border-bottom:1px solid rgba(255,255,255,.05);
+}
+
+/* HERO */
+
+.hero{
+background:
+linear-gradient(rgba(2,6,23,.85),rgba(2,6,23,.92)),
+url('https://images.unsplash.com/photo-1587854692152-cbe660dbde88?q=80&w=1600&auto=format&fit=crop');
+
+background-size:cover;
+background-position:center;
+position:relative;
+overflow:hidden;
+}
+
+.glow{
+position:absolute;
+width:500px;
+height:500px;
+background:#06b6d420;
+filter:blur(120px);
+border-radius:50%;
+}
+
+.glow1{
+top:-150px;
+left:-150px;
+}
+
+.glow2{
+bottom:-150px;
+right:-150px;
+}
+
+/* GLASS */
+
+.glass{
+background:rgba(255,255,255,.03);
+border:1px solid rgba(255,255,255,.08);
+backdrop-filter:blur(15px);
+}
+
+/* CARD */
+
+.card{
+transition:.4s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+box-shadow:0 0 35px rgba(6,182,212,.25);
+}
+
+/* BUTTON */
+
+.btn{
+transition:.3s;
+}
+
+.btn:hover{
+transform:translateY(-3px);
+box-shadow:0 0 25px rgba(6,182,212,.35);
+}
+
+/* TABLE */
+
+tbody tr{
+transition:.3s;
+}
+
+tbody tr:hover{
+background:#0f172a;
+}
+
+/* MODAL */
+
+.modal{
+display:none;
+position:fixed;
+inset:0;
+background:rgba(0,0,0,.85);
+z-index:1000;
+justify-content:center;
+align-items:center;
+padding:20px;
+}
+
+.modal-content{
+animation:popup .35s ease;
+}
+
+@keyframes popup{
+
+from{
+opacity:0;
+transform:scale(.9) translateY(20px);
+}
+
+to{
+opacity:1;
+transform:scale(1) translateY(0);
+}
+
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+.hero-title{
+font-size:3rem !important;
+}
+
+.nav-links{
+display:none;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- ═════════════════════════════ NAVBAR ═════════════════════════════ -->
+
+<nav class="navbar sticky top-0 z-50">
+
+<div class="max-w-7xl mx-auto px-6">
+
+<div class="flex justify-between items-center h-24">
+
+<!-- SAFEEN LOGO -->
+
+<div class="flex items-center gap-4">
+<a href="https://ibb.co/ym1t1qtH"></a>
+<img
+src="https://i.ibb.co/My4r47rF/logo.jpg"
+class="h-20 w-auto object-contain rounded-2xl"
+alt="Safeen Logo"/>
+
+</div>
+
+<!-- LINKS -->
+
+<div class="nav-links hidden md:flex items-center gap-10 text-lg">
+
+<a href="#hero"
+class="text-cyan-400 border-b-2 border-cyan-400 pb-1">
+Home
+</a>
+
+<a href="#overview"
+class="hover:text-cyan-400 transition">
+Modules
+</a>
+
+<a href="#directory"
+class="hover:text-cyan-400 transition">
+Drugs
+</a>
+
+<a href="#stats"
+class="hover:text-cyan-400 transition">
+Statistics
+</a>
+
+<a href="#project"
+class="hover:text-cyan-400 transition">
+Project
+</a>
+
+</div>
+
+<!-- BUTTON -->
+
+<a href="#project"
+class="hidden md:flex items-center gap-2 border border-cyan-500/30 px-6 py-3 rounded-2xl text-cyan-300 btn">
+
+<i class="fa-solid fa-graduation-cap"></i>
+Academic Portal
+
+</a>
+
+</div>
+
+</div>
+
+</nav>
+
+<!-- ═════════════════════════════ HERO ═════════════════════════════ -->
+
+<section id="hero" class="hero py-28">
+
+<div class="glow glow1"></div>
+<div class="glow glow2"></div>
+
+<div class="max-w-7xl mx-auto px-6">
+
+<div class="grid lg:grid-cols-2 gap-14 items-center">
+
+<div>
+
+<!-- LOGO + TITLE -->
+
+<div class="flex items-center gap-6 mb-8 flex-wrap">
+<a href="https://ibb.co/ym1t1qtH"></a>
+<img
+src="https://i.ibb.co/My4r47rF/logo.jpg"
+class="h-32 w-auto rounded-3xl border border-cyan-500/30 shadow-2xl shadow-cyan-500/20"
+alt="Safeen Institute Logo"/>
+
+<div>
+
+<h1 class="hero-title text-7xl font-black leading-tight">
+
+Pharma<span class="text-cyan-400">Core</span>
+
+</h1>
+
+<h2 class="text-cyan-400 text-2xl tracking-[6px] uppercase mt-2">
+
+Safeen Technical & Vocational Institute
+
+</h2>
+
+</div>
+
+</div>
+
+<p class="text-slate-300 text-xl leading-relaxed mb-10">
+
+A comprehensive academic platform for pharmacy students,
+researchers, and professionals.
+Explore clinical medicines, pharmacological data,
+and therapeutic insights.
+
+</p>
+
+<div class="flex flex-wrap gap-5">
+
+<a href="#directory"
+class="bg-cyan-500 hover:bg-cyan-400 text-slate-950 px-10 py-5 rounded-2xl text-xl font-bold btn flex items-center gap-3">
+
+<i class="fa-solid fa-capsules"></i>
+Explore Medicines
+
+</a>
+
+<a href="#project"
+class="border border-slate-700 px-10 py-5 rounded-2xl text-xl font-bold btn flex items-center gap-3">
+
+<i class="fa-solid fa-file"></i>
+Project Details
+
+</a>
+
+</div>
+
+</div>
+
+<!-- HERO IMAGE -->
+
+<div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ═════════════════════════════ OVERVIEW ═════════════════════════════ -->
+
+<section id="overview" class="py-24">
+
+<div class="max-w-7xl mx-auto px-6">
+
+<h2 class="text-5xl font-black mb-4">
+Core Pharmaceutical Sciences
+</h2>
+
+<p class="text-slate-400 text-xl mb-16">
+Essential pillars of pharmaceutical education and research
+</p>
+
+<div class="grid lg:grid-cols-4 gap-8">
+
+<!-- CARD -->
+
+<div class="glass card rounded-3xl p-10">
+
+<div class="w-20 h-20 rounded-full bg-cyan-500/10 flex items-center justify-center text-cyan-400 text-4xl mb-8">
+
+<i class="fa-solid fa-flask"></i>
+
+</div>
+
+<h3 class="text-3xl font-bold mb-4">
+Medicinal Chemistry
+</h3>
+
+<p class="text-slate-400 leading-relaxed">
+Drug design, synthesis, structural analysis,
+and pharmaceutical compounds.
+</p>
+
+</div>
+
+<!-- CARD -->
+
+<div class="glass card rounded-3xl p-10">
+
+<div class="w-20 h-20 rounded-full bg-blue-500/10 flex items-center justify-center text-blue-400 text-4xl mb-8">
+
+<i class="fa-solid fa-dna"></i>
+
+</div>
+
+<h3 class="text-3xl font-bold mb-4">
+Pharmacology
+</h3>
+
+<p class="text-slate-400 leading-relaxed">
+Drug actions, mechanisms, metabolism,
+and therapeutic applications.
+</p>
+
+</div>
+
+<!-- CARD -->
+
+<div class="glass card rounded-3xl p-10">
+
+<div class="w-20 h-20 rounded-full bg-emerald-500/10 flex items-center justify-center text-emerald-400 text-4xl mb-8">
+
+<i class="fa-solid fa-capsules"></i>
+
+</div>
+
+<h3 class="text-3xl font-bold mb-4">
+Pharmaceutics
+</h3>
+
+<p class="text-slate-400 leading-relaxed">
+Formulations, drug delivery systems,
+and pharmaceutical technology.
+</p>
+
+</div>
+
+<!-- STUDENT -->
+
+<div class="glass card rounded-3xl p-10 border border-cyan-500/40">
+
+<p class="text-cyan-400 mb-4">
+Lead Student Researcher
+</p>
+
+<h3 class="text-4xl font-black mb-6">
+Sardam Tahir Sabir
+</h3>
+
+<p class="text-slate-400 text-xl">
+Faculty of Pharmacy
+</p>
+
+<div class="mt-8 flex justify-end">
+
+<div class="w-24 h-24 rounded-2xl border border-cyan-500/50 flex items-center justify-center text-5xl font-black text-cyan-400">
+
+STS
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ═════════════════════════════ STATS ═════════════════════════════ -->
+
+<section id="stats" class="pb-24">
+
+<div class="max-w-7xl mx-auto px-6">
+
+<div class="grid md:grid-cols-4 gap-8">
+
+<div class="glass card rounded-3xl p-10">
+
+<div class="flex items-center gap-6">
+
+<div class="w-20 h-20 rounded-full bg-cyan-500/10 flex items-center justify-center text-cyan-400 text-4xl">
+
+<i class="fa-solid fa-prescription-bottle-medical"></i>
+
+</div>
+
+<div>
+
+<h3 class="text-6xl font-black text-cyan-400">
+350+
+</h3>
+
+<p class="text-slate-400 text-xl">
+Drug Profiles
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="glass card rounded-3xl p-10">
+
+<div class="flex items-center gap-6">
+
+<div class="w-20 h-20 rounded-full bg-blue-500/10 flex items-center justify-center text-blue-400 text-4xl">
+
+<i class="fa-solid fa-circle-nodes"></i>
+
+</div>
+
+<div>
+
+<h3 class="text-6xl font-black text-blue-400">
+45+
+</h3>
+
+<p class="text-slate-400 text-xl">
+Clinical Classes
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="glass card rounded-3xl p-10">
+
+<div class="flex items-center gap-6">
+
+<div class="w-20 h-20 rounded-full bg-emerald-500/10 flex items-center justify-center text-emerald-400 text-4xl">
+
+<i class="fa-solid fa-graduation-cap"></i>
+
+</div>
+
+<div>
+
+<h3 class="text-6xl font-black text-emerald-400">
+200+
+</h3>
+
+<p class="text-slate-400 text-xl">
+Research Topics
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="glass card rounded-3xl p-10">
+
+<div class="flex items-center gap-6">
+
+<div class="w-20 h-20 rounded-full bg-green-500/10 flex items-center justify-center text-green-400 text-4xl">
+
+<i class="fa-solid fa-shield-heart"></i>
+
+</div>
+
+<div>
+
+<h3 class="text-6xl font-black text-green-400">
+99%
+</h3>
+
+<p class="text-slate-400 text-xl">
+Academic Quality
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ═════════════════════════════ DRUG DIRECTORY ═════════════════════════════ -->
+
+<section id="directory" class="pb-28">
+
+<div class="max-w-7xl mx-auto px-6">
+
+<div class="flex justify-between items-center flex-wrap gap-5 mb-10">
+
+<div>
+
+<h2 class="text-5xl font-black mb-3">
+Medication Directory
+</h2>
+
+<p class="text-slate-400 text-xl">
+Interactive medicine database with detailed information
+</p>
+
+</div>
+
+<input
+type="text"
+id="searchDrug"
+placeholder="Search medicine..."
+class="bg-slate-950 border border-slate-800 px-6 py-4 rounded-2xl w-full md:w-96 focus:outline-none focus:border-cyan-500 text-white"/>
+
+</div>
+
+<div class="glass rounded-3xl overflow-hidden border border-slate-800">
+
+<div class="overflow-x-auto">
+
+<table class="w-full min-w-[1100px]">
+
+<thead class="bg-slate-950">
+
+<tr class="text-left text-slate-400 uppercase text-sm">
+
+<th class="p-6">#</th>
+<th class="p-6">Medicine</th>
+<th class="p-6">Class</th>
+<th class="p-6">Forms</th>
+<th class="p-6">Uses</th>
+<th class="p-6 text-center">Details</th>
+
+</tr>
+
+</thead>
+
+<tbody id="drugTable"></tbody>
+
+</table>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ═════════════════════════════ PROJECT ═════════════════════════════ -->
+
+<section id="project" class="py-24 max-w-7xl mx-auto px-6">
+
+<div class="glass rounded-3xl p-12 border border-slate-800/80 relative overflow-hidden">
+
+<div class="absolute -right-16 -bottom-16 text-slate-800/10 text-9xl font-extrabold select-none pointer-events-none">
+
+Rx
+
+</div>
+
+<div class="grid grid-cols-1 md:grid-cols-3 gap-10 items-center">
+
+<div class="md:col-span-2 space-y-5">
+
+<h2 class="text-4xl font-black tracking-tight">
+Academic Certification Module
+</h2>
+
+<p class="text-slate-400 text-lg leading-relaxed">
+
+This digital reference schema serves as an individual portfolio mapping framework detailing
+the core medicinal matrices taught within the college's upper tier pharmacology programs.
+
+</p>
+
+<div class="flex items-center gap-2 text-xs text-cyan-400 font-bold bg-cyan-400/5 w-fit px-4 py-2 rounded-xl border border-cyan-500/10">
+
+<i class="fa-solid fa-shield-halved"></i>
+
+Officially Authenticated Portfolio Repository
+
+</div>
+
+</div>
+
+<div class="bg-slate-950/60 border border-slate-800 p-8 rounded-2xl text-center backdrop-blur-sm shadow-inner">
+
+<div class="text-cyan-400 mb-3 text-3xl">
+
+<i class="fa-solid fa-user-graduate"></i>
+
+</div>
+
+<span class="block text-xs uppercase font-bold text-slate-500 tracking-widest mb-1">
+
+Student Author
+
+</span>
+
+<span class="text-2xl font-black block text-white tracking-wide border-b border-slate-800 pb-3 mb-3">
+
+Sardam Tahir Sabir
+
+</span>
+
+<span class="block text-sm text-slate-400 font-semibold">
+
+Faculty of Pharmacy
+<br>
+Clinical Pharmacy Division
+
+</span>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ═════════════════════════════ MODAL ═════════════════════════════ -->
+
+<div id="modal" class="modal">
+
+<div class="modal-content glass rounded-3xl overflow-hidden max-h-[90vh] overflow-y-auto"
+style="width:100%;max-width:800px;">
+
+<div class="p-6 border-b border-slate-800 flex justify-between items-center bg-slate-950">
+
+<div>
+
+<p id="modalCategory"
+class="text-cyan-400 text-sm uppercase mb-1 tracking-wider font-bold"></p>
+
+<h2 id="modalTitle"
+class="text-4xl font-black text-white"></h2>
+
+</div>
+
+<button onclick="closeModal()"
+class="text-3xl text-slate-400 hover:text-white bg-slate-900 h-12 w-12 rounded-xl border border-slate-800 flex items-center justify-center transition">
+
+<i class="fa-solid fa-xmark"></i>
+
+</button>
+
+</div>
+
+<div class="p-8 space-y-8">
+
+<div class="w-full h-80 rounded-2xl overflow-hidden border border-slate-800 bg-slate-950 relative">
+
+<img id="modalImage"
+src=""
+class="w-full h-full object-cover opacity-90"
+alt="Drug Visualization"/>
+
+</div>
+
+<div class="grid md:grid-cols-2 gap-6">
+
+<div class="bg-cyan-500/5 border border-cyan-500/10 p-6 rounded-2xl space-y-3">
+
+<h3 class="text-cyan-400 text-xl font-bold flex items-center gap-2">
+
+<i class="fa-solid fa-circle-check"></i>
+
+Benefits & Uses
+
+</h3>
+
+<p id="modalBenefits"
+class="text-slate-300 leading-relaxed text-base font-medium"></p>
+
+</div>
+
+<div class="bg-rose-500/5 border border-rose-500/10 p-6 rounded-2xl space-y-3">
+
+<h3 class="text-rose-400 text-xl font-bold flex items-center gap-2">
+
+<i class="fa-solid fa-triangle-exclamation"></i>
+
+Side Effects & Risks
+
+</h3>
+
+<p id="modalToxicity"
+class="text-slate-300 leading-relaxed text-base font-medium"></p>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="p-4 bg-slate-950 border-t border-slate-800/60 text-center text-xs text-slate-500">
+
+Academic Reference System maintained by
+<span class="text-slate-400 font-semibold">
+Sardam Tahir Sabir
+</span>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- ═════════════════════════════ FOOTER ═════════════════════════════ -->
+
+<footer class="border-t border-slate-900 py-14 text-center bg-slate-950/40">
+
+<div class="max-w-7xl mx-auto px-6 flex flex-col items-center gap-4">
+<a href="https://ibb.co/ym1t1qtH"></a>
+<img
+src="https://i.ibb.co/My4r47rF/logo.jpg"
+class="h-16 w-auto object-contain opacity-80"
+alt="Safeen Institute Logo"/>
+
+<p class="text-slate-500 text-sm">
+
+© 2026 Safeen Technical & Vocational Institute
+
+</p>
+
+</div>
+
+</footer>
+
+<!-- ═════════════════════════════ SCRIPT ═════════════════════════════ -->
+
+<script>
+
+/* DRUG DATABASE - تێکەڵکراو لەگەڵ وێنە فەرمییەکانی سەرەوە */
+
+const drugs = {
+
+"1. Medication Side Effects Graphics (MED-01)": {
+        category: "Official Medical Graphics",
+        forms: "Graphical Educational System",
+        indication: "Explanation of Adverse Effects",
+        image: "image_agent_tag_14935263834610899514", // Official Image 1
+        benefits: "Provides detailed insights into the mechanism of drug action within the human body and methods to mitigate disease symptoms.",
+        toxicity: "As illustrated in the modal graphic, common symptoms such as headache, nausea, and dizziness are visually explained."
+    },
+
+    "2. Drug Packaging and Bottle Design (MED-02)": {
+        category: "Oral Form",
+        forms: "Box / Bottle",
+        indication: "Official Medication Identification",
+        image: "image_agent_tag_14935263834610898743", // Official Image 2
+        benefits: "Identifies the correct layout and appearance of the authentic medication in pharmacies to prevent the purchase of counterfeit products.",
+        toxicity: "Must be stored in a cool, dry place according to medical instructions, strictly out of reach of children."
+    },
+
+"Paracetamol":{
+category:"Analgesic",
+forms:"Tablet / Syrup",
+indication:"Pain & Fever",
+image:"https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=1000&q=80",
+benefits:"Used to reduce fever and relieve headache, muscle pain, and mild pain conditions.",
+toxicity:"Overdose may cause severe liver damage and hepatic failure."
+},
+
+"Amoxicillin":{
+category:"Antibiotic",
+forms:"Capsule / Suspension",
+indication:"Bacterial Infection",
+image:"https://images.unsplash.com/photo-1628771065518-0d82f1938462?auto=format&fit=crop&w=1000&q=80",
+benefits:"Effective for respiratory and bacterial infections.",
+toxicity:"Misuse can cause antibiotic resistance and allergic reactions."
+},
+
+"Ibuprofen":{
+category:"NSAID",
+forms:"Tablet / Gel",
+indication:"Inflammation & Pain",
+image:"https://images.unsplash.com/photo-1555365572-240c3132e604?auto=format&fit=crop&w=1000&q=80",
+benefits:"Used for inflammation, arthritis pain, and fever reduction.",
+toxicity:"May cause gastric bleeding and kidney problems in overdose."
+},
+
+"Metformin":{
+category:"Biguanide",
+forms:"Tablet",
+indication:"Type 2 Diabetes",
+image:"https://images.unsplash.com/photo-1550572017-edd951b55104?auto=format&fit=crop&w=1000&q=80",
+benefits:"Controls blood glucose levels in diabetic patients and improves insulin sensitivity.",
+toxicity:"Overdose or usage in severe kidney impairment may cause lactic acidosis."
+},
+
+"Omeprazole":{
+category:"PPI",
+forms:"Capsule",
+indication:"GERD & Ulcers",
+image:"https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=1000&q=80",
+benefits:"Reduces stomach acid and treats ulcers.",
+toxicity:"Long-term use may reduce magnesium and weaken bones."
+},
+
+"Tramadol":{
+category:"Opioid Analgesic",
+forms:"Capsule / Injection",
+indication:"Moderate to Severe Pain",
+image:"https://images.unsplash.com/photo-1587854692152-cbe660dbde88?q=80&w=1200&auto=format&fit=crop",
+benefits:"Provides strong pain relief.",
+toxicity:"Overdose may cause respiratory depression and seizures."
+},
+
+"Azithromycin":{
+category:"Macrolide Antibiotic",
+forms:"Tablet / Suspension",
+indication:"Respiratory Infection",
+image:"https://images.unsplash.com/photo-1628771065518-0d82f1938462?q=80&w=1200&auto=format&fit=crop",
+benefits:"Treats bacterial infections such as pneumonia and throat infections.",
+toxicity:"Can cause liver problems and heart rhythm abnormalities."
+},
+
+"Diclofenac (Voltaren)":{
+category:"NSAID",
+forms:"Tablet / Gel / Injection",
+indication:"Pain & Inflammation",
+image:"https://images.unsplash.com/photo-1587854692152-cbe660dbde88?q=80&w=1200&auto=format&fit=crop",
+benefits:"Used to relieve arthritis pain, muscle pain, and inflammation.",
+toxicity:"Overdose may cause stomach bleeding, ulcers, and kidney damage."
+},
+
+"Aspirin (Thrombo)":{
+category:"Antiplatelet",
+forms:"Tablet",
+indication:"Blood Thinner",
+image:"https://images.unsplash.com/photo-1555365572-240c3132e604?q=80&w=1200&auto=format&fit=crop",
+benefits:"Prevents blood clot formation and heart attack risk.",
+toxicity:"May cause bleeding and stomach ulcers."
+},
+
+"Fluoxetine (Prozac)":{
+category:"SSRI",
+forms:"Capsule",
+indication:"Depression",
+image:"https://images.unsplash.com/photo-1522844990219-53586d5e5f39?q=80&w=1200&auto=format&fit=crop",
+benefits:"Improves mood and reduces anxiety.",
+toxicity:"May cause serotonin syndrome in overdose."
+},
+
+"Fluconazole (Diflucan)":{
+category:"Azole Antifungal",
+forms:"Capsule / Intravenous",
+indication:"Fungal Infections",
+image:"https://images.unsplash.com/photo-1584017911766-d451b3d0e843?auto=format&fit=crop&w=1000&q=80",
+benefits:"Highly effective against systemic and superficial candidiasis.",
+toxicity:"Abdominal pain, elevated liver enzymes, and potential hepatotoxicity."
+},
+
+"Nystatin":{
+category:"Polyene Antifungal",
+forms:"Oral Suspension / Ointment",
+indication:"Candidiasis (Thrush)",
+image:"https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=1000&q=80",
+benefits:"Treats local fungal infections of the skin and oral cavity effectively.",
+toxicity:"Minimal systemic absorption, but high doses may cause nausea and diarrhea."
+},
+
+"Acyclovir (Zovirax)":{
+category:"Antiviral (Nucleoside Analog)",
+forms:"Tablet / Cream / Injection",
+indication:"Herpes Simplex & Shingles",
+image:"https://images.unsplash.com/photo-1626814026160-2237a95fc5a0?auto=format&fit=crop&w=1000&q=80",
+benefits:"Decreases the severity and duration of viral outbreaks.",
+toxicity:"Can precipitate in renal tubules, leading to nephrotoxicity if hydration is poor."
+},
+
+"Oseltamivir (Tamiflu)":{
+category:"Neuraminidase Inhibitor (Antiviral)",
+forms:"Capsule / Suspension",
+indication:"Influenza A & B",
+image:"https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=1000&q=80",
+benefits:"Reduces flu symptoms and shortens recovery time if taken early.",
+toxicity:"May cause transient nausea, vomiting, and rare neuropsychiatric events."
+},
+
+"Levothyroxine (Eltroxin)":{
+category:"Thyroid Hormone",
+forms:"Tablet",
+indication:"Hypothyroidism",
+image:"https://images.unsplash.com/photo-1550572017-edd951b55104?auto=format&fit=crop&w=1000&q=80",
+benefits:"Restores adequate thyroid hormone levels to maintain normal metabolism.",
+toxicity:"Overdose causes symptoms of hyperthyroidism, including tachycardia and tremors."
+},
+
+"Insulin Glargine (Lantus)":{
+category:"Long-Acting Insulin",
+forms:"Subcutaneous Injection",
+indication:"Diabetes Mellitus",
+image:"https://images.unsplash.com/photo-1584515933487-7598c9b99c89?auto=format&fit=crop&w=1000&q=80",
+benefits:"Provides a steady basal level of insulin throughout the 24-hour cycle.",
+toxicity:"Severe hypoglycemia and lipodystrophy at the injection site."
+},
+
+"Ondansetron (Zofran)":{
+category:"5-HT3 Receptor Antagonist",
+forms:"Tablet / Injection / ODT",
+indication:"Nausea & Vomiting",
+image:"https://images.unsplash.com/photo-1607619056574-7b8d304f3c6f?auto=format&fit=crop&w=1000&q=80",
+benefits:"Prevents nausea caused by cancer chemotherapy, radiation, or surgery.",
+toxicity:"Headache, constipation, and a risk of QT interval prolongation."
+},
+
+"Rivaroxaban (Xarelto)":{
+category:"DOAC (Factor Xa Inhibitor)",
+forms:"Tablet",
+indication:"Thrombosis & Stroke Prevention",
+image:"https://images.unsplash.com/photo-1471864190281-a93a3070b6de?auto=format&fit=crop&w=1000&q=80",
+benefits:"Prevents deep vein thrombosis (DVT) without requiring routine blood monitoring.",
+toxicity:"Significant risk of major bleeding and hematomas."
+},
+
+"Warfarin":{
+category:"Vitamin K Antagonist (Anticoagulant)",
+forms:"Tablet",
+indication:"Blood Clot Prevention",
+image:"https://images.unsplash.com/photo-1611073166144-c7117f7fefc6?auto=format&fit=crop&w=1000&q=80",
+benefits:"Long-term prevention of thromboembolic disorders and stroke in AFib.",
+toxicity:"Highly variable dosing; requires frequent INR monitoring to prevent fatal hemorrhage."
+},
+
+"Dexamethasone":{
+category:"Corticosteroid",
+forms:"Tablet / Injection / Eye Drop",
+indication:"Severe Inflammation & Allergy",
+image:"https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=1000&q=80",
+benefits:"Potent anti-inflammatory effect; manages severe asthma and autoimmune flares.",
+toxicity:"Adrenal suppression, hyperglycemia, fluid retention, and long-term osteoporosis."
+},
+
+"Prednisolone":{
+category:"Corticosteroid",
+forms:"Tablet / Syrup",
+indication:"Inflammation & Autoimmune Diseases",
+image:"https://images.unsplash.com/photo-1550572017-edd951b55104?auto=format&fit=crop&w=1000&q=80",
+benefits:"Suppresses the immune system to treat conditions like arthritis and lupus.",
+toxicity:"Cushingoid features, increased susceptibility to infections, and mood swings."
+},
+
+"Furosemide (Lasix)":{
+category:"Loop Diuretic",
+forms:"Tablet / Injection",
+indication:"Edema & Hypertension",
+image:"https://images.unsplash.com/photo-1607619056574-7b8d304f3c6f?auto=format&fit=crop&w=1000&q=80",
+benefits:"Rapidly removes excess fluid from the body in congestive heart failure.",
+toxicity:"Severe dehydration, hypokalemia, and ototoxicity if infused too rapidly."
+},
+
+"Spironolactone":{
+category:"Potassium-sparing Diuretic",
+forms:"Tablet",
+indication:"Heart Failure & Ascites",
+image:"https://images.unsplash.com/photo-1584017911766-d451b3d0e843?auto=format&fit=crop&w=1000&q=80",
+benefits:"Blocks aldosterone, helping to reduce fluid accumulation while conserving potassium.",
+toxicity:"Hyperkalemia and endocrine side effects like gynecomastia in males."
+},
+
+"Salbutamol (Ventolin)":{
+category:"Short-Acting Beta-2 Agonist",
+forms:"Inhaler / Nebulizer Solution",
+indication:"Asthma & Bronchospasm",
+image:"https://images.unsplash.com/photo-1587854692152-cbe660dbde88?auto=format&fit=crop&w=1000&q=80",
+benefits:"Acts within minutes to dilate airways during acute asthma attacks.",
+toxicity:"Tachycardia, skeletal muscle tremors, and hypokalemia with excessive use."
+},
+
+"Meloxicam (Meloxicam / Piroxicam)":{
+category:"NSAID (COX-2 Inhibitor)",
+forms:"Tablet / Capsule",
+indication:"Osteoarthritis & RA",
+image:"https://images.unsplash.com/photo-1555365572-240c3132e604?auto=format&fit=crop&w=1000&q=80",
+benefits:"Provides long-lasting relief from joint pain and stiffness with lower GI risk.",
+toxicity:"Cardiovascular thrombotic risks and renal impairment with prolonged use."
+},
+
+"Cefixime":{
+category:"Cephalosporin Antibiotic",
+forms:"Tablet / Suspension",
+indication:"Urinary & Respiratory Infections",
+image:"https://images.unsplash.com/photo-1628771065518-0d82f1938462?auto=format&fit=crop&w=1000&q=80",
+benefits:"Broad-spectrum coverage against many Gram-negative bacterial strains.",
+toxicity:"Pseudomembranous colitis due to Clostridioides difficile overgrowth."
+},
+
+"Metronidazole (Flagyl)":{
+category:"Antiprotozoal / Antibiotic",
+forms:"Tablet / Gel / Infusion",
+indication:"Amoebiasis & Anaerobic Infections",
+image:"https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=1000&q=80",
+benefits:"Excellent activity against anaerobic bacteria and protozoal pathogens.",
+toxicity:"Metallic taste, peripheral neuropathy, and severe disulfiram-like reaction with alcohol."
+},
+
+"Gliclazide (Diamicron)":{
+category:"Sulfonylurea (Antidiabetic)",
+forms:"Tablet (Modified Release)",
+indication:"Type 2 Diabetes",
+image:"https://images.unsplash.com/photo-1550572017-edd951b55104?auto=format&fit=crop&w=1000&q=80",
+benefits:"Stimulates pancreatic beta cells to secrete more insulin.",
+toxicity:"Prolonged hypoglycemia and potential weight gain."
+},
+
+"Esomeprazole (Nexium)":{
+category:"PPI",
+forms:"Tablet / Injection",
+indication:"GERD & H. Pylori Eradication",
+image:"https://images.unsplash.com/photo-1707011984711-d0b8f480bf13?auto=format&fit=crop&w=1000&q=80",
+benefits:"Provides superior gastric acid suppression compared to first-generation PPIs.",
+toxicity:"Increased risk of enteric infections (Salmonella) and vitamin B12 deficiency over time."
+},
+
+"Hyoscine (Buscopan)":{
+category:"Antispasmodic",
+forms:"Tablet / Injection",
+indication:"Abdominal Cramps",
+image:"https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=1000&q=80",
+benefits:"Relaxes the smooth muscles of the gastrointestinal and urinary tracts.",
+toxicity:"Anticholinergic effects such as dry mouth, blurred vision, and urinary retention."
+},
+
+"Atenolol / Metoprolol":{
+category:"Beta-Blocker",
+forms:"Tablet",
+indication:"Hypertension & Angina",
+image:"https://images.unsplash.com/photo-1607619056574-7b8d304f3c6f?auto=format&fit=crop&w=1000&q=80",
+benefits:"Reduces heart rate and myocardial contractility, lowering blood pressure.",
+toxicity:"Bradycardia, cold extremities, and bronchospasm in asthmatic patients."
+},
+
+"Mefenamic Acid (Ponstan)":{
+category:"NSAID",
+forms:"Capsule / Tablet",
+indication:"Menstrual Cramps & Mild Pain",
+image:"https://images.unsplash.com/photo-1555365572-240c3132e604?auto=format&fit=crop&w=1000&q=80",
+benefits:"Specifically effective for menorrhagia and dysmenorrhea primary pain.",
+toxicity:"Gastrointestinal disturbances, severe diarrhea, and nephrotoxicity."
+},
+
+"Augmentin (Amoxicillin + Clavulanic acid)":{
+category:"Penicillin Antibiotic",
+forms:"Tablet / Suspension",
+indication:"Resistant Bacterial Infections",
+image:"https://images.unsplash.com/photo-1628771065518-0d82f1938462?auto=format&fit=crop&w=1000&q=80",
+benefits:"Clavulanic acid prevents bacterial resistance against amoxicillin.",
+toxicity:"High incidence of diarrhea, skin rashes, and cholestatic jaundice."
+},
+
+"Glibenclamide":{
+category:"Antidiabetic",
+forms:"Tablet",
+indication:"Type 2 Diabetes",
+image:"https://images.unsplash.com/photo-1550572017-edd951b55104?auto=format&fit=crop&w=1000&q=80",
+benefits:"Potent blood glucose reduction by increasing insulin release.",
+toxicity:"High risk of severe, long-lasting hypoglycemia, especially in elderly patients."
+},
+
+"Sitagliptin":{
+category:"Antidiabetic",
+forms:"Tablet",
+indication:"Type 2 Diabetes",
+image:"https://images.unsplash.com/photo-1550572017-edd951b55104?auto=format&fit=crop&w=1000&q=80",
+benefits:"Increases incretin levels to naturally regulate insulin post-meals without weight gain.",
+toxicity:"Risk of acute pancreatitis and joint pain."
+},
+
+"Rosuvastatin (Crestor)":{
+category:"Statin",
+forms:"Tablet",
+indication:"Hypercholesterolemia",
+image:"https://images.unsplash.com/photo-1471864190281-a93a3070b6de?auto=format&fit=crop&w=1000&q=80",
+benefits:"Significantly reduces LDL (bad cholesterol) and lowers cardiovascular risk.",
+toxicity:"Myalgia, rhabdomyolysis (rare muscle breakdown), and elevated liver enzymes."
+},
+
+"Lansoprazole / Pantoprazole":{
+category:"PPI",
+forms:"Capsule / Tablet",
+indication:"Acid Reflux & GERD",
+image:"https://images.unsplash.com/photo-1707011984711-d0b8f480bf13?auto=format&fit=crop&w=1000&q=80",
+benefits:"Heals erosive esophagitis and controls baseline nocturnal acid production.",
+toxicity:"Hypomagnesemia and increased risk of bone fractures during long-term therapy."
+},
+
+"Alprazolam (Xanax)":{
+category:"Benzodiazepine",
+forms:"Tablet",
+indication:"Panic Disorder & Severe Anxiety",
+image:"https://images.unsplash.com/photo-1522844990219-53586d5e5f39?auto=format&fit=crop&w=1000&q=80",
+benefits:"Provides rapid, immediate relief from debilitating panic attacks.",
+toxicity:"High potential for physiological dependence, severe withdrawal, and sedation."
+},
+
+"Valsartan / Losartan":{
+category:"ARB (Antihypertensive)",
+forms:"Tablet",
+indication:"Hypertension & Heart Failure",
+image:"https://images.unsplash.com/photo-1607619056574-7b8d304f3c6f?auto=format&fit=crop&w=1000&q=80",
+benefits:"Blocks angiotensin II receptors, dilating blood vessels without causing chronic cough.",
+toxicity:"Hyperkalemia, dizziness due to hypotension, and renal dysfunction."
+},
+
+    "Amlodipine (Norvasc)": {
+        category: "Calcium Channel Blocker",
+        forms: "Tablet",
+        indication: "Hypertension & Angina",
+        image: "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=1000&q=80",
+        benefits: "Relaxes blood vessels, improving blood flow and lowering elevated pressure vectors.",
+        toxicity: "May induce peripheral edema, headache, flushing, and transient dizziness."
+    },
+    "Atenolol": {
+        category: "Beta-Blocker",
+        forms: "Tablet",
+        indication: "Hypertension & Myocardial Infarction",
+        image: "https://images.unsplash.com/photo-1607619056574-7b8d304f3c6f?auto=format&fit=crop&w=1000&q=80",
+        benefits: "Reduces cardiac workload and regularizes pulse rhythm under physiological exertion.",
+        toxicity: "Risk of symptomatic bradycardia, fatigue, cold extremities, and severe bronchospasms."
+    },
+    "Digoxin (Lanoxin)": {
+        category: "Cardiac Glycoside",
+        forms: "Tablet / Injection",
+        indication: "Heart Failure & Atrial Fibrillation",
+        image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=1000&q=80",
+        benefits: "Increases myocardial contractility while optimizing structural AV node conduction pathways.",
+        toxicity: "Narrow therapeutic index; toxic margins present blurred yellow vision, nausea, and arrhythmias."
+    },
+    "Gabapentin (Neurontin)": {
+        category: "Anticonvulsant / GABA Analog",
+        forms: "Capsule / Tablet",
+        indication: "Neuropathic Pain & Seizures",
+        image: "https://images.unsplash.com/photo-1628771065518-0d82f1938462?auto=format&fit=crop&w=1000&q=80",
+        benefits: "Calms hyper-excited neural firing profiles to arrest chronic neuropathic stinging pain.",
+        toxicity: "Somnolence, peripheral edema, structural ataxia, and deep therapeutic sedation."
+    },
+    "Carbamazepine (Tegretol)": {
+        category: "Anticonvulsant (Sodium Channel Blocker)",
+        forms: "Tablet / Liquid",
+        indication: "Epilepsy & Trigeminal Neuralgia",
+        image: "https://images.unsplash.com/photo-1550572017-edd951b55104?auto=format&fit=crop&w=1000&q=80",
+        benefits: "Stabilizes hyperstimulated neuronal membranes by blocking voltage-gated sodium channels.",
+        toxicity: "Dizziness, structural blood dyscrasias, hyponatremia, and critical Stevens-Johnson syndrome."
+    },
+    "Sodium Valproate (Depakine)": {
+        category: "Broad-Spectrum Antiepileptic",
+        forms: "Syrup / Tablet",
+        indication: "Seizure Control & Bipolar Mania",
+        image: "https://images.unsplash.com/photo-1555365572-240c3132e604?auto=format&fit=crop&w=1000&q=80",
+        benefits: "Enhances critical inhibitory GABA concentrations across central synaptic junctions.",
+        toxicity: "Hepatotoxicity, congenital teratogenicity, significant weight gain, and transient alopecia."
+    },
+    "Cetirizine": {
+        category: "Second-Generation Antihistamine",
+        forms: "Tablet / Syrup",
+        indication: "Allergic Rhinitis & Urticaria",
+        image: "https://images.unsplash.com/photo-1584017911766-d451b3d0e843?auto=format&fit=crop&w=1000&q=80",
+        benefits: "Blocks peripheral histamine H1 receptors without significant central disruption.",
+        toxicity: "Mild drowsiness, xerostomia (dry mouth), fatigue, and headaches."
+    },
+    "Chlorpheniramine (Piriton)": {
+        category: "First-Generation Antihistamine",
+        forms: "Tablet / Liquid",
+        indication: "Acute Anaphylaxis & Allergy Relief",
+        image: "https://images.unsplash.com/photo-1522844990219-53586d5e5f39?auto=format&fit=crop&w=1000&q=80",
+        benefits: "Rapidly counteracts structural histamine systemic releases triggered by allergens.",
+        toxicity: "High sedative latency, severe anticholinergic outcomes, dry throat, and urinary retention."
+    },
+    "Tamsulosin (Omnic)": {
+        category: "Alpha-1 Blocker",
+        forms: "Capsule (Sustained Release)",
+        indication: "Benign Prostatic Hyperplasia (BPH)",
+        image: "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=1000&q=80",
+        benefits: "Relaxes prostatic smooth muscle architecture to restore optimal urine flow.",
+        toxicity: "Postural orthostatic hypotension, retrograde ejaculation, and intraoperative floppy iris syndrome."
+    },
+    "Solifenacin (Vesicare)": {
+        category: "Antimuscarinic",
+        forms: "Tablet",
+        indication: "Overactive Bladder (OAB)",
+        image: "https://images.unsplash.com/photo-1607619056574-7b8d304f3c6f?auto=format&fit=crop&w=1000&q=80",
+        benefits: "Reduces detrusor muscle tonus to mitigate immediate urinary urgency spikes.",
+        toxicity: "Dry mouth matrix, persistent constipation, blurred vision, and heat intolerance."
+    },
+    "Amitriptyline": {
+        category: "Tricyclic Antidepressant (TCA)",
+        forms: "Tablet",
+        indication: "Major Depression & Migraine Prophylaxis",
+        image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=1000&q=80",
+        benefits: "Inhibits serotonin and norepinephrine reuptake while normalizing central pain thresholds.",
+        toxicity: "Cardiotoxicity (QT prolongation), profound sedation, weight gain, and anticholinergic crisis."
+    },
+    "Escitalopram (Cipralex)": {
+        category: "SSRI",
+        forms: "Tablet",
+        indication: "Generalized Anxiety & MDD",
+        image: "https://images.unsplash.com/photo-1522844990219-53586d5e5f39?auto=format&fit=crop&w=1000&q=80",
+        benefits: "Selectively elevates synaptic serotonin concentration thresholds across the central nervous system.",
+        toxicity: "Sexual dysfunction, nausea, initial anxiety spikes, and sudden serotonin syndrome risk."
+    },
+    "Olanzapine (Zyprexa)": {
+        category: "Atypical Antipsychotic",
+        forms: "Tablet / ODT",
+        indication: "Schizophrenia & Bipolar I Disorder",
+        image: "https://images.unsplash.com/photo-1628771065518-0d82f1938462?auto=format&fit=crop&w=1000&q=80",
+        benefits: "Balances complex dopamine and serotonin receptor cascades to diminish active psychosis.",
+        toxicity: "Severe metabolic syndrome, dramatic weight gain, hyperglycemia, and somnolence."
+    },
+    "Allopurinol (Zyloric)": {
+        category: "Xanthine Oxidase Inhibitor",
+        forms: "Tablet",
+        indication: "Gout Prophylaxis & Hyperuricemia",
+        image: "https://images.unsplash.com/photo-1550572017-edd951b55104?auto=format&fit=crop&w=1000&q=80",
+        benefits: "Arrests the enzymatic production of uric acid, avoiding joint crystal deposits.",
+        toxicity: "Hypersensitivity syndrome, skin rashes, bone marrow suppression, and acute gout flare induction."
+    },
+    "Alendronate (Fosamax)": {
+        category: "Bisphosphonate",
+        forms: "Tablet",
+        indication: "Osteoporosis Management",
+        image: "https://images.unsplash.com/photo-1555365572-240c3132e604?auto=format&fit=crop&w=1000&q=80",
+        benefits: "Inhibits osteoclast activity to preserve and optimize skeletal bone mineral density.",
+        toxicity: "Severe chemical esophagitis (requires remaining upright), and rare jaw osteonecrosis."
+    },
+    "Methotrexate": {
+        category: "DMARD",
+        forms: "Tablet / Injection",
+        indication: "Rheumatoid Arthritis & Psoriasis",
+        image: "https://images.unsplash.com/photo-1584017911766-d451b3d0e843?auto=format&fit=crop&w=1000&q=80",
+        benefits: "Suppresses immune hyper-responsiveness via dihydrofolate reductase pathway disruption.",
+        toxicity: "Hepatotoxicity, severe myelosuppression, oral mucosal ulcers, and pulmonary fibrosis."
+    },
+    "Glucosamine": {
+        category: "Cartilage Supplement",
+        forms: "Capsule / Tablet",
+        indication: "Osteoarthritis Joint Care",
+        image: "https://images.unsplash.com/photo-1471864190281-a93a3070b6de?auto=format&fit=crop&w=1000&q=80",
+        benefits: "Provides biological building substrates for structural proteoglycan synthesis in cartilage.",
+        toxicity: "Mild GI distress, flatulence, and potential hypersensitivity in patients with shellfish allergies."
+    },
+    "Latanoprost (Xalatan)": {
+        category: "Prostaglandin Analog",
+        forms: "Ophthalmic Solution",
+        indication: "Open-Angle Glaucoma",
+        image: "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=1000&q=80",
+        benefits: "Increases uveoscleral outflow mechanics to reduce elevated intraocular fluid tension vectors.",
+        toxicity: "Iris brown pigmentation shift, hypertrichosis of eyelashes, and localized ocular hyperemia."
+    },
+    "Ciprofloxacin + Dexamethasone": {
+        category: "Antibiotic + Steroid Combo",
+        forms: "Otic Suspension",
+        indication: "Otitis Media & Otitis Externa",
+        image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=1000&q=80",
+        benefits: "Eradicates local bacterial colonies while rapidly muting inflammatory ear canal edema.",
+        toxicity: "Local irritation, otic discomfort, and risk of fungal superinfection with prolonged misuse."
+    },
+    "Naloxone (Narcan)": {
+        category: "Opioid Antagonist",
+        forms: "Nasal Spray / Injection",
+        indication: "Acute Opioid Overdose",
+        image: "https://images.unsplash.com/photo-1607619056574-7b8d304f3c6f?auto=format&fit=crop&w=1000&q=80",
+        benefits: "Displaces opioid molecules from mu-receptors to immediately restore depressed respiratory functions.",
+        toxicity: "Induces severe, acute withdrawal syndrome, tachycardia, agitation, and hypertensive spikes."
+    },
+    "Activated Charcoal": {
+        category: "Adsorbent",
+        forms: "Oral Powder / Suspension",
+        indication: "Acute Poisoning & Toxic Ingestion",
+        image: "https://images.unsplash.com/photo-1628771065518-0d82f1938462?auto=format&fit=crop&w=1000&q=80",
+        benefits: "Adsorbs structural toxic molecules within the GI tract lumen, preventing systemic blood entry.",
+        toxicity: "Black-colored stools, emesis, intestinal obstruction, and direct pulmonary aspiration risks."
+    },
+    "Ferrous Sulfate": {
+        category: "Iron Supplement",
+        forms: "Tablet / Elixir",
+        indication: "Iron Deficiency Anemia",
+        image: "https://images.unsplash.com/photo-1550572017-edd951b55104?auto=format&fit=crop&w=1000&q=80",
+        benefits: "Replenishes dynamic elemental iron reserves essential for systemic hemoglobin synthesis.",
+        toxicity: "Constipation, dark tarry stools, abdominal cramping, and acute systemic iron toxicity in pediatric overdose."
+    },
+    "Cholecalciferol (Vitamin D3)": {
+        category: "Fat-Soluble Vitamin",
+        forms: "Capsule / Drops / Injection",
+        indication: "Vitamin D Deficiency & Rickets",
+        image: "https://images.unsplash.com/photo-1555365572-240c3132e604?auto=format&fit=crop&w=1000&q=80",
+        benefits: "Enhances active calcium intestinal absorption and maintains dynamic mineral bone balance.",
+        toxicity: "Hypercalcemia over-saturation, metastatic tissue calcification, polyuria, and renal calculi."
+    },
+    "Cyanocobalamin (Vitamin B12)": {
+        category: "Water-Soluble Vitamin",
+        forms: "Injection / Tablet",
+        indication: "Pernicious Anemia & Neuropathy",
+        image: "https://images.unsplash.com/photo-1584017911766-d451b3d0e843?auto=format&fit=crop&w=1000&q=80",
+        benefits: "Essential co-factor for structural myelin synthesis and red blood cell maturation cycles.",
+        toxicity: "Highly safe; excessive doses are excreted via renal pathways, rare mild cutaneous hypersensitivity."
+    }
+
+
+
+
+
+
+};
+
+/* BUILD TABLE */
+
+const tableBody = document.getElementById("drugTable");
+
+Object.keys(drugs)
+.sort((a,b)=>a.localeCompare(b))
+.forEach((name,index)=>{
+
+const drug = drugs[name];
+
+const row = document.createElement("tr");
+
+row.className =
+"border-t border-slate-800 cursor-pointer";
+
+row.setAttribute("onclick",
+`openModal('${name.replace(/'/g,"\\'")}')`);
+
+row.innerHTML = `
+
+<td class="p-6 text-slate-500 font-bold text-base">
+${String(index + 1).padStart(2,"0")}
+</td>
+
+<td class="p-6 text-cyan-400 font-bold text-lg">
+
+<div class="flex items-center gap-4">
+
+<img
+src="${drug.image}"
+class="w-16 h-16 rounded-2xl object-cover border border-slate-700"
+onerror="this.src='https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=1000&q=80'"/>
+
+<div>
+
+<div class="font-bold text-lg">${name}</div>
+
+<div class="text-slate-500 text-sm">
+${drug.category}
+</div>
+
+</div>
+
+</div>
+
+</td>
+
+<td class="p-6 font-medium text-white">
+${drug.category}
+</td>
+
+<td class="p-6">
+
+<span class="bg-slate-900 border border-slate-800 px-3 py-1 rounded-lg text-sm">
+
+${drug.forms}
+
+</span>
+
+</td>
+
+<td class="p-6 text-slate-400">
+${drug.indication}
+</td>
+
+<td class="p-6 text-center">
+
+<span class="bg-cyan-500/10 border border-cyan-500/20 px-5 py-2 rounded-xl text-cyan-400 font-bold hover:bg-cyan-500 hover:text-slate-950 transition duration-300">
+
+View
+
+</span>
+
+</td>
+
+`;
+
+tableBody.appendChild(row);
+
+});
+
+/* MODAL */
+
+const modal = document.getElementById("modal");
+
+function openModal(name){
+
+const drug = drugs[name];
+
+if(!drug) return;
+
+document.getElementById("modalTitle").innerText = name;
+document.getElementById("modalCategory").innerText = drug.category;
+document.getElementById("modalImage").src = drug.image;
+document.getElementById("modalBenefits").innerText = drug.benefits;
+document.getElementById("modalToxicity").innerText = drug.toxicity;
+
+// ئەگەر وێنەکە لە سێرڤەرەوە بارنەبوو، وێنەیەکی پاشەکەوت دادەنێت
+document.getElementById("modalImage").onerror = function() {
+    this.src = "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=1000&q=80";
+};
+
+modal.style.display = "flex";
+
+document.body.style.overflow = "hidden";
+
+}
+
+function closeModal(){
+
+modal.style.display = "none";
+document.body.style.overflow = "auto";
+
+}
+
+window.addEventListener("click",(e)=>{
+
+if(e.target === modal){
+
+closeModal();
+
+}
+
+});
+
+/* SEARCH */
+
+document.getElementById("searchDrug")
+.addEventListener("keyup",function(){
+
+const filter = this.value.toLowerCase();
+
+document.querySelectorAll("#drugTable tr")
+.forEach(row=>{
+
+row.style.display =
+row.innerText.toLowerCase().includes(filter)
+? ""
+: "none";
+
+});
+
+});
+
+</script>
+
+</body>
+</html>
